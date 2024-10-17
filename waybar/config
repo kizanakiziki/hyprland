@@ -1,0 +1,27 @@
+{
+    "layer": "top",
+    "height": 30,
+    "position": "top",
+    "spacing": 0,
+    
+    // LOAD MODULES
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "bluetooth",
+        "backlight",
+        "pulseaudio",
+        "battery",
+    ],
+}

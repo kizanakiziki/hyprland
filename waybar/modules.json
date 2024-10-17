@@ -1,0 +1,92 @@
+{
+    // MODULES CONFIG
+
+    // Clock
+    "clock":{
+        "interval": 60,
+        "format": "{:%e %b %Y %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
+        "on-click": "hyprmsg exec \\$calendar"
+    },
+
+    // Battery
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15,
+        },
+        "format-charging": "󰂄 {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󱃍", "󰁺", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true
+    },
+
+    // Screen Brightness
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "hyprctl exec \\$brightness_up",
+        "on-scroll-down": "hyprctl exec \\$brightness_down"
+    },
+
+    // Volume
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon} {volume}%{format_source}",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "",
+        "format-source-muted": " 󰍭",
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "tooltip-format": "{icon}  {volume}% {format_source}",
+        "on-click": "swaymsg exec \\$pulseaudio",
+        "on-click-middle": "swaymsg exec \\$volume_mute",
+        "on-scroll-up": "swaymsg exec \\$volume_up",
+        "on-scroll-down": "swaymsg exec \\$volume_down"
+    },
+
+    // Networking
+    "network": {
+        "format": "{icon} {ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "format-disabled": "󰀝",
+        "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ],
+        "tooltip-format": "{icon} {ifname}: {ipaddr} via {gwaddri}",
+        "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}",
+        "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}",
+        "tooltip-format-disconnected": "{icon} disconnected",
+        "tooltip-format-disabled": "{icon} disabled",
+        "max-length": 50,
+        "on-click": "alacritty -e nmtui"
+    },
+    
+    /*
+    "network": {
+        "interval": 5,
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "format-disabled": "󰀝",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip-format": "{icon} {ifname}: {ipaddr}",
+        "tooltip-format-ethernet": "{icon} {ifname}: {ipaddr}",
+        "tooltip-format-wifi": "{icon} {ifname} ({essid}): {ipaddr}",
+        "tooltip-format-disconnected": "{icon} disconnected",
+        "tooltip-format-disabled": "{icon} disabled",
+        "on-click": "swaymsg exec \\$once \\$term_float nmtui connect"
+    },
+    */
+}
