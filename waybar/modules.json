@@ -53,7 +53,7 @@
     // Networking
     "network": {
         "format": "{icon} {ifname}",
-        "format-wifi": "{icon}",
+        "format-wifi": "{icon} {essid}",
         "format-ethernet": "󰈀",
         "format-disconnected": "󰖪",
         "format-disabled": "󰀝",
