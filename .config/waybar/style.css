@@ -1,0 +1,69 @@
+@define-color bgcolor #000000;
+@define-color fgcolor #ffffff;
+
+@define-color accent1 #077308;
+@define-color accent2 #4aa91f;
+/*
+@define-color accent3 #ff9e64;
+@define-color accent4 #bb9af7;
+@define-color accent5 #7da6ff;
+@define-color accent6 #0db9d7;
+*/
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 13px;
+}
+
+/* WINDOW */
+window#waybar {
+    transition-property: background-color;
+    /* background-color: rgba(0, 0, 0, 1); */
+    background: transparent;
+    transition-duration: 0.5s;
+    /* border-radius: 4px; */
+    color: @foreground;
+    opacity: 1;
+    
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* WORKSPACES */
+#workspaces button {
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 6px 18px;
+    margin: 6px 3px;
+    /* border-radius: 4px; */
+    color: @fgcolor;
+    background-color: @bgcolor;
+    border: 1px solid @fgcolor;
+}
+
+#workspaces button.active {
+    background-color: @accent1;
+    color: @fgcolor;
+    border: 1px solid @fgcolor;
+}
+
+/* DOT PER ITEM CONFIG HERE */
+#network,
+#clock,
+#bluetooth, 
+#backlight,
+#pulseaudio,
+#battery,
+#tray {
+    /* border-radius: 4px; */
+    margin: 6px 3px;
+    padding: 6px 12px;
+    background-color: @bgcolor;
+    color: @fgcolor;
+    border: 1px solid @fgcolor;
+}
