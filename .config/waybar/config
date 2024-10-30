@@ -1,16 +1,16 @@
 {
     "layer": "top",
-    "height": 30,
+    "height": 0,
     "position": "top",
     "spacing": 0,
-    
+
     // LOAD MODULES
     "include": [
         "~/.config/waybar/modules.json"
     ],
 
     "modules-left": [
-        "custom/logo",
+        "custom/arch",
         "hyprland/workspaces",
     ],
     "modules-center": [
