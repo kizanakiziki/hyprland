@@ -17,7 +17,7 @@
         "clock"
     ],
     "modules-right": [
-        "tray",
+        //"tray",
         "network",
         "bluetooth",
         "backlight",

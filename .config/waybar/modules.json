@@ -1,6 +1,9 @@
 {
   // MODULES CONFIG
 
+  // LOGO
+  "custom/arch": {},
+
   // Clock
   "clock": {
     "interval": 60,
