@@ -1,8 +1,9 @@
 {
     "layer": "top",
-    "height": 0,
+    "height": 24,
     "position": "top",
-    "spacing": 0,
+    "spacing": 4,
+    "margin": "10 10 0 10",
 
     // LOAD MODULES
     "include": [
@@ -23,5 +24,6 @@
         "backlight",
         "pulseaudio",
         "battery",
+        "custom/power",
     ],
 }

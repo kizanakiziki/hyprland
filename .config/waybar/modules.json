@@ -1,9 +1,15 @@
 {
   // MODULES CONFIG
 
-  // LOGO
-  "custom/arch": {},
+  // MODULES LEFT
+  "custom/arch": {
+    "format": "",
+    "tooltip": false
+  },
 
+  "hyprland/workspaces": {},
+
+  // MODULES CENTER
   // Clock
   "clock": {
     "interval": 60,
@@ -13,6 +19,7 @@
     "on-click": "hyprmsg exec \\$calendar"
   },
 
+  // MODULES RIGHT
   // Battery
   "battery": {
     "interval": 30,
@@ -68,5 +75,11 @@
     "tooltip-format-disabled": "{icon} disabled",
     "max-length": 50,
     "on-click": "alacritty -e nmtui"
+  },
+
+  // Power
+  "custom/power": {
+    "format": "",
+    "tooltip": false
   }
 }
