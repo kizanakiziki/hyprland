@@ -1,17 +1,6 @@
-@define-color pureblack #000000; /* PURE BLACK */
-@define-color purewhite #ffffff; /* PURE WHITE */
+@import "colors.css";
 
-@define-color accent1 #EEDD39; /* yellow */
-@define-color accent2 #1A1A1A; /* gray */
-@define-color color1 #FFFFFF; /* WHITE */
-@define-color color2 #000000; /* blackgray */
-
-/*
-@define-color accent3 #ff9e64;
-@define-color accent4 #bb9af7;
-@define-color accent5 #7da6ff;
-@define-color accent6 #0db9d7;
-*/
+/* WAYBAR STYLING */
 
 * {
     border: none;
@@ -24,22 +13,22 @@
 
 /* WINDOW */
 window#waybar {
-    /* background: @accent1; */
-    background: rgba(238, 221, 57, 0.9);
+    background: @accent2;
+    /* background: rgba(238, 221, 57, 0.9); */
     /* background: rgba(0, 0, 0, 0.65); */
     /* background: transparent; */
     border-radius: 24px;
     /* border: 1px solid @purewhite; */
 }
 
-/* window#waybar.hidden {
+window#waybar.hidden {
     opacity: 0.2;
-} */
+}
 
 /* MODULES LEFT */
 #custom-arch {
-    background-color: @accent2;
-    color: @accent1;
+    background-color: @accent3;
+    color: @accent2;
     margin: 8 0 8 8;
     border-radius: 30px;
     padding: 6 12 6 8;
@@ -47,7 +36,7 @@ window#waybar {
 }
 
 #workspaces {
-    background-color: @accent2;
+    background-color: @accent3;
     margin: 8 0;
     border-radius: 8px;
 }
@@ -58,15 +47,19 @@ window#waybar {
     padding: 0;
 }
 #workspaces button.active {
-    background-color: @accent1;
-    color: @accent2;
+    background-color: @accent2;
+    color: @accent3;
     border-radius: 6px;
     padding: 0 2;
 }
 
+#workspaces button:hover {
+    background-color: @accent2;
+}
+
 #clock {
     color: @color1;
-    background-color: @accent2;
+    background-color: @accent3;
     padding: 0 28 0 20;
     margin: 8 0;
     border-radius: 6px;
@@ -80,15 +73,15 @@ window#waybar {
 #pulseaudio,
 #tray {
     color: @color1;
-    background-color: @accent2;
+    background-color: @accent3;
     margin: 8 0;
     padding: 0 8;
     border-radius: 6px;
 }
 
 #custom-power {
-    background-color: @accent2;
-    color: @accent1;
+    background-color: @accent3;
+    color: @accent2;
     margin: 8 8 8 0;
     border-radius: 30px;
     padding: 6 12 6 9;
