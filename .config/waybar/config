@@ -13,6 +13,7 @@
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"

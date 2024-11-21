@@ -57,6 +57,10 @@ window#waybar.hidden {
     background-color: @accent2;
 }
 
+#window {
+    color: white;
+}
+
 #clock {
     color: @color1;
     background-color: @accent3;
